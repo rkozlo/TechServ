@@ -1,9 +1,11 @@
 <!doctype HTML>
-<HTML lang="pl">
+<HTML lang="pl_PL">
 <head>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+
     <script type="text/javascript" src="js/fun.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="Stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body>
@@ -13,10 +15,9 @@
         </div>
         <div class="nav-bar" id="navBar">
             <a class="active" href="#"> HOME </a>
-            <a href="#"> Cennik </a>
             <a href="galeria.html"> Galeria </a>
-            <a href="#"> Części </a>
-            <a href="#"> Polecane komponenty </a>
+            <a href="#"> Polecane </a>
+            <a href="formularz.html"> Formularz </a>
             <a href="javascript:void(0);" class="icon" onclick="resizeNavBar()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -25,35 +26,38 @@
     
     <div id="main">
         <h1 class="appear">TechServ od 20 lat z pasją do komputerów </h2>
-    </div>
     
-    <div class="flex-box">
-        <div class="window appear">
+        <div class="flex-box">
+            <div class="window appear2">
+                <h2 class="window-head">
+                    <p> Naprawy </p>
+                </h2>
+                <img src="images/repair.jpeg" class="center">
+            </div>
+            <div class="window appear2">
             <h2 class="window-head">
-                <p> Naprawy </p>
+                <p> Sprzedaż części </p>
+                <img src="images/parts.jpeg" class="Center">
             </h2>
-            <img src="images/repair.jpeg" class="center">
+            </div>
+            <div class="window appear2">
+            <h2 class="window-head">
+                <p> Dobór części i składanie zestawów </p>
+                <img src="images/components.jpg" class="Center">
+            </h2>
+            </div>
         </div>
-        <div class="window">
-        <h2 class="window-head">
-            <p> Sprzedaż części </p>
-            <img src="images/parts.jpeg" class="Center">
-        </h2>
-        </div>
-        <div class="window">
-        <h2 class="window-head">
-            <p> Dobór części i składanie zestawów </p>
-            <img src="images/components.jpg" class="Center">
-        </h2>
-        </div>
-    </div>
-    <div>
-        <h3 style="color: yellow"> Masz pytanie? </h3>
-        <div class="sign-button">
-            <p> Spytaj! </p>
+        <div>
+            <h3 style="color: yellow"> Masz pytanie? </h3>
+            <a href="formularz.html"> 
+                <div class="sign-button">
+                    <p> Spytaj! </p>
+                </div>
+            </a>
         </div>
     </div>
     <footer>
     
     </footer>
 </body>
+</html>

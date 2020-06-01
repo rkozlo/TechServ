@@ -1,9 +1,9 @@
 <!doctype HTML>
-<HTML lang="pl">
+<HTML lang="pl_PL">
 <head>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script type="text/javascript" src="js/fun.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
 </head>
 
 <body>
@@ -12,35 +12,36 @@
             <a href="index.html"> <img src="images/logo.png" alt="">
         </div>
         <div class="nav-bar" id="navBar">
-            <a href="#"> HOME </a>
-            <a href="#"> Cennik </a>
+            <a href="index.html"> HOME </a>
             <a class="active" href="#"> Galeria </a>
-            <a href="#"> Części </a>
-            <a href="#"> Polecane komponenty </a>
+            <a href="#"> Polecane </a>
+            <a href="formularz.html"> Formularz </a>
             <a href="javascript:void(0);" class="icon" onclick="resizeNavBar()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
     </header>
-    <h1 style="margin-top: 5%; color: #ffff00"> Zdjęcia z naszych napraw </h1>
-    <div class="gallery">
-        <a target="_blank" href="images/repair-pc-1.jpg">
-            <img src="images/repair-pc-1.jpg" alt="repair1" width="600" height="400">
-        </a>
-        <div class="desc"> Wymiana chłodzenia procesora"</div>
+    <div id="main">
+        <h1 style="display: block; color: #ffff00"> Zdjęcia z naszych napraw </h1>cd 
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/repair-pc-1.jpg" alt="repair1">
+            <div class="desc"> Wymiana chłodzenia procesora</div>
+        </div>
+        
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/repair-pc-2.jpg" alt="repair2">
+            <div class="desc"> Naprawa stacji dyskietek ;) </div>
+        </div>
+        
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/repair-lap-1.jpg" alt="repair3">
+            <div class="desc"> Diagnoza usterki laptopa </div>
+        </div>
+        
+        <div id="enl" class="enlarged">
+            <span class="close">&times;</span>
+            <img class="content" id="img00">
+        </div>
     </div>
-    <div class="gallery">
-        <a target="_blank" href="images/repair-pc-2.jpg">
-            <img src="images/repair-pc-2.jpg" alt="repair2" width="600" height="400">
-        </a>
-        <div class="desc"> Naprawa stacji dyskietek ;) </div>
-    </div>
-    <div class="gallery">
-        <a target="_blank" href="images/repair-lap-1.jpg">
-            <img src="images/repair-lap-1.jpg" alt="repair3" width="600" height="400">
-        </a>
-        <div class="desc"> Diagnoza usterki laptopa </div>
-    </div>
-    
 </body>
 </html>

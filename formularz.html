@@ -1,0 +1,87 @@
+ <!doctype HTML>
+<HTML lang="pl">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="js/form.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header id="header">
+        <div id="logo">
+            <a href="index.html"> <img src="images/logo.png" alt="">
+        </div>
+        <div class="nav-bar" id="navBar">
+            <a href="index.html"> HOME </a>
+            <a href="galeria.html"> Galeria </a>
+            <a href="#"> Polecane </a>
+            <a class="active" href="formularz.html"> Formularz </a>
+            <a href="javascript:void(0);" class="icon" onclick="resizeNavBar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+   
+   <form class="form center" id="zglos" method="get" action="#">
+        <h1> Nie wiesz? Zapytaj! </h1>
+        <div class="row">
+            <div class="line">Imię </div>
+            <div class="read"><input type="text" id="name" name="name"></div>
+            <div id="iname" class="info"></div>
+        </div>
+        <div class="row">
+            <div class="line">Nazwisko </div>
+            <div class="read"><input type="text" id="surname" name="surname"></div>
+            <div id="isurname" class="info"></div>
+        </div>
+        <div class="row"  style="float: left;">
+            <div class="line">Ulica </div>
+            <div class="read"><input type="text" id="street" name="street"></div>
+            <div id="istreet" class="info"></div>
+        </div>
+        <div class="row" style="margin-left:10px; margin-right: 10px; float: left;">
+            <div class="line"> Nr. domu</div>
+            <div class="read"><input type="text" id="house" name="house" class="small-input"></div>
+            <div id="istreet" class="info"> </div>
+        </div>
+        <div class="row">
+            <div class="line"> Nr. mieszkania</div>
+            <div class="read"><input type="text" id="flat" name="flat" class="small-input"></div>
+            <div id="istreet" class="info"> </div>
+        </div>
+        <div class="row" style="float: left; margin-right: 10px;">
+            <div class="line"> Miasto </div>
+            <div class="read"><input type="text" id="city" name="city"></div>
+            <div id="icity" class="info"> </div>
+        </div>
+        <div class="row">
+            <div class="line"> Kod pocztowy </div>
+            <div class="read"><input type="text" id="postcode" name="postcode" style="width: 50px;"></div>
+            <div id="ipostcode" class="info"> </div>
+        </div>
+        
+        <div class="row">
+            <div class="line">Numer telefonu </div>
+            <div class="read"><input type="tel" id="phone" name="phone"></div>
+            <div id="iphone" class="info"></div>
+        </div>
+        <div class="row">
+            <div class="line">E-mail </div>
+            <div class="read"><input type="email" id="email" name="email"></div>
+            <div id="iemail" class="info"></div>
+        </div>
+        <div class="row">
+            <div class="line"> Opis </div>
+            <div class="read"><input type="text" id="description" name="description"></div>
+            <div id="idescription" class="info"></div>
+        </div>
+        <a href="#"> <div class="sub-button">
+            <p> Wyślij </p>
+        </div></a>
+   </form>
+   
+   <footer>
+   
+   </footer>
+</body>
