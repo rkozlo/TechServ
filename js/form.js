@@ -1,51 +1,65 @@
 function isNotEmpty(field){
+    var info = document.getElementById("i"+field.id);
     if(field.value == ""){
-        style(field, false);
+        field.className = "blad";
+        info.innerHTML= "To pole musi być uzupełnione";
         return false;
     }else{
-        style(field, true);
+        field.className = "ok";
+        info.innerHTML = "";
         return true;
     }
 }
 
-function isNumber(field){
-    if(isNotEmpty(field)){
-        if(isNaN(field)){
-            style(field, false);
-            return false;
-        }else {
-            style(field, true);
+function isPhoneNumber(field){
+    var patt = /^(\+[0-9]{2}\ ?)?[0-9]{3}\-?[0-9]{3}\-?[0-9]+$/  //wyrażenie regularne do sprawdzenia numeru telefonu
+    var info = document.getElementById("i"+field.id);
+    //sprawdzenie czy wartosć w polu zgadza sie z wyrażeniem regularnym
+    if (isNotEmpty(field)){
+        if (patt.test(field.value)){
+            field.className = "ok";
+            info.innerHTML = "";
             return true;
-    }
-    }else{
+        } else {
+            field.className = "blad";
+            info.innerHTML = "Zły format!";
+            return false;
+        }
         return false;
-    }
-}
-
-function style(field, state) {
-    var info = document.getElementById("i"+field.id)
-    if(state == true) {
-        info.innerHTML = "";
-        field.className = "ok";
-    } else {
-        info.innerHTML = "Uzupełnij to pole"
-        field.className = "Błąd"
     }
 }
 
 function onSubmit(form) {
     if(
         isNotEmpty(form.name) && isNotEmpty(form.surname) &&
-        isNumber(form.phone) && isNotEmpty(form.email) &&
+        isPhoneNumber(form.phone) && isNotEmpty(form.email) &&
         isNotEmpty(form.description) && isNotEmpty(form.street) &&
-        isNumber(form.house) && isNotEmpty(form.flat) &&
-        isNotEmpty(form.postcode) && isNotEmpty(form.city)
+        isPostcode(form.postcode) && isNotEmpty(form.city)
     ){
         return true;
     } else {
         return false;
     }
 }
+
+function isPostcode(field) {
+    if (isNotEmpty(field)){
+        // podobnie jak wyżejh wykorzystanie regexp do sprawdzenia poprawności danych
+        var patt = /^[0-9]{2}\-[0-9]{3}/;
+        var info = document.getElementById("ipostcode");
+        if(patt.test(field.value)){
+            field.className = "ok";
+            info.innerHTML = "";
+            return true;
+        } else {
+            field.className = "blad";
+            info.innerHTML = "Zły format! Ma być 00-000";
+            return false;
+        }
+    }
+    return false;
+}
+
 function Init(){
     var name = document.getElementById("name");
     name.onblur = function(){
@@ -63,12 +77,12 @@ function Init(){
     }
     var house = document.getElementById("house");
     house.onblur = function(){
-        isNumber(this);
+        isNotEmpty(this);
     }
     
     var postcode = document.getElementById("postcode");
     postcode.onblur = function(){
-        isNotEmpty(this);
+        isPostcode(this);
     }
     
     var surname = document.getElementById("surname");
@@ -78,7 +92,7 @@ function Init(){
     
     var phone = document.getElementById("phone");
     phone.onblur = function(){
-        isNumber(this);
+        isPhoneNumber(this);
     }
     
     var email = document.getElementById("email");

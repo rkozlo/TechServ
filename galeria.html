@@ -4,44 +4,98 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script type="text/javascript" src="js/gallery.js"></script>
+    <meta charset="UTF-8">
 </head>
 
 <body>
     <header id="header">
         <div id="logo">
-            <a href="index.html"> <img src="images/logo.png" alt="">
+            <a href="index.html"> <img src="images/logo.png" alt=""> </a>
         </div>
         <div class="nav-bar" id="navBar">
             <a href="index.html"> HOME </a>
             <a class="active" href="#"> Galeria </a>
-            <a href="#"> Polecane </a>
             <a href="formularz.html"> Formularz </a>
-            <a href="javascript:void(0);" class="icon" onclick="resizeNavBar()">
-                <i class="fa fa-bars"></i>
-            </a>
         </div>
     </header>
-    <div id="main">
-        <h1 style="display: block; color: #ffff00"> Zdjęcia z naszych napraw </h1>cd 
-        <div class="gallery" id="mygallery">
-            <img id="gal-img" onclick="enlarge(this)" src="images/repair-pc-1.jpg" alt="repair1">
-            <div class="desc"> Wymiana chłodzenia procesora</div>
-        </div>
-        
-        <div class="gallery" id="mygallery">
-            <img id="gal-img" onclick="enlarge(this)" src="images/repair-pc-2.jpg" alt="repair2">
-            <div class="desc"> Naprawa stacji dyskietek ;) </div>
-        </div>
-        
-        <div class="gallery" id="mygallery">
-            <img id="gal-img" onclick="enlarge(this)" src="images/repair-lap-1.jpg" alt="repair3">
-            <div class="desc"> Diagnoza usterki laptopa </div>
-        </div>
-        
+    
+<div id="main">
         <div id="enl" class="enlarged">
             <span class="close">&times;</span>
             <img class="content" id="img00">
         </div>
+        <h1 class="appear"> Zdjęcia z naszych napraw </h1>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/repair-pc-1.jpg" alt="repair1">
+            <div class="desc"> Wymiana chłodzenia procesora</div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/repair-pc-2.jpg" alt="repair2">
+            <div class="desc"> Naprawa stacji dyskietek ;) </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/repair-lap-1.jpg" alt="repair3">
+            <div class="desc"> Diagnoza usterki laptopa </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/replace-cpu.jpg" alt="replace-cpu">
+            <div class="desc"> Wymiana procesora </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/oc-ram.jpg" alt="oc-ram">
+            <div class="desc"> Podkręcanie pamięci </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/lap-gpu.jpg" alt="lap-gpu">
+            <div class="desc"> Uszkodzona grafika w laptopie </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/repair-lap-2.jpg" alt="lap-gpu-2">
+            <div class="desc"> Kolejna karta w laptopie </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/printer-1.jpg" alt="printer-1">
+            <div class="desc"> Uszkodzona drukarka </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/reball.jpg" alt="reball-1">
+            <div class="desc"> Reballing w laptopie </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/psu-1.jpg" alt="psu-1">
+            <div class="desc"> Naprawa zasilacza </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/repair-pc-3.jpg" alt="cpu">
+            <div class="desc"> Wymiana procesora </div>
+        </div>
+        <div class="gallery" id="mygallery">
+            <img id="gal-img" onclick="enlarge(this)" src="images/rack-1.jpg" alt="rack-comuter">
+            <div class="desc"> Przygotowywanie serwera </div>
+        </div>
     </div>
+
+    <footer>
+        <div class="follow">
+            <h3> Śledź nas na: </h3>
+            <a class="icon" href="#">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a class="icon" href="#">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+            <a class="icon" href="#">
+                <i class="fa fa-youtube-square"></i>
+            </a>
+        </div>
+        <div class="contact">
+            <h3> Kontakt: </h3>
+            <p> Gdańsk </p>
+            <p> Nektarowa 12 </p>
+            <p> +48 666 555 444 </p>
+            <p> techser@serwis.pl</p>
+        </div>
+        <p style="clear: both; padding-left: 10px;"> Copyright TechServ© </p>
+   </footer>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script type="text/javascript" src="js/form.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 </head>
 
 <body>
@@ -15,11 +16,7 @@
         <div class="nav-bar" id="navBar">
             <a href="index.html"> HOME </a>
             <a href="galeria.html"> Galeria </a>
-            <a href="#"> Polecane </a>
             <a class="active" href="formularz.html"> Formularz </a>
-            <a href="javascript:void(0);" class="icon" onclick="resizeNavBar()">
-                <i class="fa fa-bars"></i>
-            </a>
         </div>
     </header>
    
@@ -27,61 +24,74 @@
         <h1> Nie wiesz? Zapytaj! </h1>
         <div class="row">
             <div class="line">Imię </div>
-            <div class="read"><input type="text" id="name" name="name"></div>
+            <div class="read"><input type="text" id="name" name="name" placeholder="Jan" pattern="^[A-ZŁÓ]{1}[a-złóęąćśżźń]+" title="Imię zaczynające się wielką literą."></div>
             <div id="iname" class="info"></div>
         </div>
         <div class="row">
             <div class="line">Nazwisko </div>
-            <div class="read"><input type="text" id="surname" name="surname"></div>
+            <div class="read"><input type="text" id="surname" name="surname" placeholder="Kowalski" pattern="^[A-ZĘÓĄŚŁŻŹĆŃ]{1}[a-złóęąćśżźń]+(-?[A-ZĘÓĄŚŁŻŹĆŃ]{1}[a-złóęąćśżźń]+)?$" title="Nazwisko wielką literą lub dwa nazwiska: Kowalski-Nowak"></div>
             <div id="isurname" class="info"></div>
         </div>
-        <div class="row"  style="float: left;">
+        <div class="row">
             <div class="line">Ulica </div>
-            <div class="read"><input type="text" id="street" name="street"></div>
+            <div class="read"><input type="text" id="street" name="street" placeholder="Konopnickiej"></div>
             <div id="istreet" class="info"></div>
         </div>
-        <div class="row" style="margin-left:10px; margin-right: 10px; float: left;">
-            <div class="line"> Nr. domu</div>
-            <div class="read"><input type="text" id="house" name="house" class="small-input"></div>
-            <div id="istreet" class="info"> </div>
-        </div>
         <div class="row">
-            <div class="line"> Nr. mieszkania</div>
-            <div class="read"><input type="text" id="flat" name="flat" class="small-input"></div>
-            <div id="istreet" class="info"> </div>
+            <div class="line"> Nr. domu i mieszkania</div>
+            <div class="read"><input type="text" id="house" name="house" placeholder="1 , 1E/1 , 1/2" pattern="^[0-9]+[A-Za-zĘÓĄŚŁŻŹĆŃłóęąćśżźń]?(\/?[0-9]+)?$" title="Adres w dowolnym formacie: 1, 1/1, 1A/1"></div>
+            <div id="ihouse" class="info"></div>
         </div>
-        <div class="row" style="float: left; margin-right: 10px;">
+
+        <div class="row">
             <div class="line"> Miasto </div>
-            <div class="read"><input type="text" id="city" name="city"></div>
-            <div id="icity" class="info"> </div>
+            <div class="read"><input type="text" id="city" name="city" placeholder="Gdańsk"  title="Nazwa miasta musi się zaczynać wielką literą"></div>
+            <div id="icity" class="info" pattern="^[A-ZĘÓĄŚŁŻŹĆŃ]"></div>
         </div>
         <div class="row">
             <div class="line"> Kod pocztowy </div>
-            <div class="read"><input type="text" id="postcode" name="postcode" style="width: 50px;"></div>
-            <div id="ipostcode" class="info"> </div>
+            <div class="read"><input type="text" id="postcode" name="postcode" placeholder="00-000" title="Kod pocztowy musi mieć format: 01-000"></div>
+            <div id="ipostcode" class="info"></div>
         </div>
-        
         <div class="row">
             <div class="line">Numer telefonu </div>
-            <div class="read"><input type="tel" id="phone" name="phone"></div>
+            <div class="read"><input type="tel" id="phone" name="phone" placeholder="111222333" title="Numer telefonu komórkowego"></div>
             <div id="iphone" class="info"></div>
         </div>
         <div class="row">
             <div class="line">E-mail </div>
-            <div class="read"><input type="email" id="email" name="email"></div>
+            <div class="read"><input type="email" id="email" name="email" placeholder="jankowalski@domain.com" title="Przykładowy adres email: jankowalski@wp.pl" required></div>
             <div id="iemail" class="info"></div>
         </div>
         <div class="row">
             <div class="line"> Opis </div>
-            <div class="read"><input type="text" id="description" name="description"></div>
-            <div id="idescription" class="info"></div>
+            <div class="read"><textarea id="description" name="description"></textarea></div>
         </div>
-        <a href="#"> <div class="sub-button">
+        <a href="#" value="Submit" type="submit"> <div class="sub-button">
             <p> Wyślij </p>
         </div></a>
    </form>
    
    <footer>
-   
+        <div class="follow">
+            <h3> Śledź nas na: </h3>
+            <a class="icon" href="#">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a class="icon" href="#">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+            <a class="icon" href="#">
+                <i class="fa fa-youtube-square"></i>
+            </a>
+        </div>
+        <div class="contact">
+            <h3> Kontakt: </h3>
+            <p> Gdańsk </p>
+            <p> Nektarowa 12 </p>
+            <p> +48 666 555 444 </p>
+            <p> techser@serwis.pl</p>
+        </div>
+        <p style="clear: both; padding-left: 10px;"> Copyright TechServ© </p>
    </footer>
 </body>

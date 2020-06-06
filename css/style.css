@@ -1,9 +1,16 @@
 body {
+    margin: 0;
+    background: url(../images/hardware.jpg), rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
     font-family: sans-serif;
+    height: auto;
 }
 
 #header {
-    background: gray;
+    z-index: 1;
+    background: #68c1ff;
     margin: 0;
     top: 0;
     left: 0;
@@ -16,7 +23,7 @@ body {
 #logo img{
     float: left;
     display: block;
-    width: 5%;
+    width: 100px;
     height: auto;
     margin-left: 20%;
     margin-top: 0.5%;
@@ -24,30 +31,76 @@ body {
     margin-right: 2%;
 }
 
+footer {
+    clear: both;
+    width: 100%;
+    height: 180px;
+    background-color: #68c1ff;
+    opacity: 0.7;
+    bottom: 0;
+}
+
+footer .follow {
+    padding-left: 10px;
+    float: left;
+}
+
+footer .follow .icon {
+    margin-left: 2%;
+    font-size: 30px;
+    text-decoration: none;
+    color: none;
+}
+
+footer .contact {
+    float: right;
+    padding-right: 100px;
+}
+
+h3, p {
+    color: #000000;
+    opacity: none;
+}
+
+footer .contact p {
+    line-height: 5px;
+}
+
+i {
+    color: black;
+    font-size: 20px;
+    display: inline-block;
+}
+
+form .blad {
+    border-color: red;
+    border-radius: 3px;
+}
+
+.info {
+    float: right;
+    color: red;
+}
 
 #header .nav-bar {
     float: right;
     margin: 10px;
 }
 
-body {
-    background: url(../images/hardware.jpg), rgba(0,0,0,0.6);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 1080px;
-    display: block;
-}
 
 #main {
-/*     margin-top: 8%; */
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 90px;
+    clear: both;
 }
 
 #main h1 {
     color: #ffffff;
     margin-left: 30%;
-    margin-top: 5%;
     display: block;
     font-size: 30px;
+    clear: both;
 }
 
 #about-us{
@@ -55,24 +108,15 @@ body {
     border-color: 
 }
 
+.opis img {
+    width: 400px;
+    float: right;
+    border-radius: 5px;
+}
 .appear {
     animation-name: show-up;
     animation-duration: 0.5s;
     animation-delay: 0.1s;
-    animation-fill-mode: backwards;
-}
-
-.appear2 {
-    animation-name: show-up;
-    animation-duration: 1.0s;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-}
-
-.appear3 {
-    animation-name: show-up;
-    animation-duration: 1.0s;
-    animation-delay: 0.5s;
     animation-fill-mode: backwards;
 }
 
@@ -103,7 +147,6 @@ body {
     font-size: 17px;
     text-decoration: none;
     line-height: 1.5;
-    margin-bottom: 5px;
 }
 
 .nav-bar a:hover{
@@ -115,22 +158,13 @@ body {
     color: yellow;
 }
 
-.nav-bar .icon {
-    display: none;
-}
-
-.container {
-    text-align: center;
-    color: white;
-}
-
 .window {
     margin-top: 1%;
     width: 300px;
     height: auto;
     border-style: solid;
     border-width: 2px;
-    border-color: #7f7d76;
+    border-color: #68c1ff;
     border-radius: 3px;
     background-color: white;
     margin-left: 1%;
@@ -143,10 +177,10 @@ body {
 .window-head{
     margin: 0;
     border-style: solid;
-    background: #7f7d76;
-    border-color: #7f7d76;
+    background: #68c1ff;
+    border-color: #68c1ff;
     text-align: center;
-    color: #ffff00;
+    color: #68c1ff;
 }
 
 .flex-box {
@@ -154,7 +188,6 @@ body {
     height: auto;
     margin-left: 10%;
     flex-wrap: wrap;
-/*     width: 90%; */
     justify-content: center;
     align-items: flex-start;
     align-content: space-between;
@@ -173,16 +206,23 @@ body {
     display: inline-block;
     font-size: 18px;
 }
+.sign-button p {
+    color: #e1dd6b;
+}
 
 .window img {
     border-radius: 5px;
 }
 
 div.gallery {
+    margin-bottom: 2%;
+    background-color: #68c1ffad;
     margin-left: 1%;
     border: 1px solid #ccc;
     float: left;
-    width: 300px;
+    width: 280px;
+    height: auto;
+    min-height: 280px;
 }
 
 div.gallery:hover{
@@ -195,17 +235,20 @@ div.gallery:hover{
 
 #gal-img {
     cursor: pointer;
-    width: 300px;
-    height: auto;
+    width: 280px;
+    height: 250px;
+    align: center;
 }
 
 div.desc {
     margin-top: -6px;
     padding: 10px;
     text-align: center;
-    width: 300px;
-    background-color: #7f7d76;
+    font-size: 18px;
+    width: 280px;
+    background-color: #68c1ff;
     color: #ffff00;
+
 }
 
 div.gallery * {
@@ -219,26 +262,31 @@ div.gallery * {
 }
 
 
-#description{   
+#description{ 
+    padding: 3px;
     width: 90%;
     height: 20rem;
-    word-wrap: break-word;
-
+    display: block;
+    overflow: auto;
+    word-break: break-all;
+    max-height: 30%;
+    max-width: 800px;
+    resize: none;
 }
 
 .form {
     border-radius: 5px;
-    margin-top: 5%;
+    margin-top: 8%;
     background-color: #7f7d76;
     width: 50%;
     height:auto;
-    min-height: 850px;
+    min-height: 1000px;
     padding: 10px;
+    margin-bottom: 1%;
 }
 
 .sub-button {
    width: 80px;
-/*     height: 40px; */
     float:right;
     margin-right: 2%;
     margin-top: 1%;
@@ -252,20 +300,17 @@ div.gallery * {
     border: 1px solid;
 }
 
-.small-input{
-    width:30px;
-}
-
 .enlarged {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 10px;
+    padding-bottom:100px;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    width: auto;
+    height: 80%;
+    overflow-y: scroll;
     animation-name: enlarge-zoom;
     animation-duration: 0.5s;
     background-color: rgba(0,0,0,0.9);
@@ -287,7 +332,7 @@ div.gallery * {
     top:50px;
     right: 50px;
     color: #555555;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
     background-color:
@@ -298,26 +343,30 @@ div.gallery * {
     cursor: pointer;
 }
 
+@media screen and (max-width: 1150px) {
+    .form {
+        margin-top: 13%;
+    }
+}
 
 @media screen and (max-width: 680px) {
+    
+    body {
+        min-height: 1800px;
+    }
 
     #main {
-        margin-top: 15%;
+        margin-top: 80px;
+        margin-left: 10%;
+    }
+    #header {
+        height: 70px;
     }
     h1 {
         font-size: 1rem !important;
     }
-    .nav-bar a:not(:first-child) {display: none;}
-    .nav-bar a.icon {
-        float: right;
-        display: block;
-    }
+
     .nav-bar.responsive {position: relative;}
-    .nav-bar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        left: 0;
-    }
     .nav-bar.responsive a {
         float: none;
         display: block;
@@ -329,6 +378,15 @@ div.gallery * {
         width: 90%;
     }
     #logo img {
-        width: 15%;
+        width: 100px;
+    }
+    footer {
+        height: 100px;
+    }
+    footer h3 {
+        display: none;
+    }
+    footer p {
+        font-size: 10px;
     }
 }
